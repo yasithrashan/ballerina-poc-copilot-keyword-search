@@ -10,6 +10,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "ballerina-poc-copilot-keyword-search": ".",
     "okapibm25": "^1.4.1"
   }
 }
