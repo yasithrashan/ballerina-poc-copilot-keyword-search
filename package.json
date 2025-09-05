@@ -1,0 +1,15 @@
+{
+  "name": "ballerina-poc-copilot-keyword-search",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "okapibm25": "^1.4.1"
+  }
+}
