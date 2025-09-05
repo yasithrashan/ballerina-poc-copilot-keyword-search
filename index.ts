@@ -1,5 +1,6 @@
-import { readdirSync, statSync } from "fs";
+import { readdirSync, readFileSync, statSync } from "fs";
 import path from "path";
+import { collapseTextChangeRangesAcrossMultipleVersions } from "typescript";
 
 function loadBallrinaFiles(dir: string): string[] {
     let files: string[] = []
@@ -15,5 +16,10 @@ function loadBallrinaFiles(dir: string): string[] {
     return files;
 }
 
+function readFileContents(files: string[]): string[] {
+    return files.map((filePath) => readFileSync(filePath, 'utf8'))
+}
+
 const files = loadBallrinaFiles('./ballerina');
-console.log(files);
+const fileContents = readFileContents(files);
+console.log(fileContents);
